@@ -6,6 +6,10 @@ connectToDB().catch(err => {
   console.log("DB init failed, continuing without DB:", err.message);
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "Backend is live and healthy!" });
+});
+
 app.listen(3000, () => {
   console.log("Server is running on port 3000")
   setTimeout(() => {
