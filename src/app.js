@@ -6,10 +6,10 @@ const app = express()
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({
-    origin: "https://ai-frontend-snowy.vercel.app",
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"]
+app.use(require('cors')({
+  origin: "https://ai-frontend-snowy.vercel.app",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"]
 }))
 
 /* require all the routes here */

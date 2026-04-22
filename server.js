@@ -10,9 +10,4 @@ app.get("/", (req, res) => {
   res.json({ message: "Backend is live and healthy!" });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000")
-  setTimeout(() => {
-    console.log("DB Connected:", typeof global !== 'undefined' && global.dbConnected !== undefined ? global.dbConnected : 'unknown');
-  }, 1000);
-});
+module.exports = app;
